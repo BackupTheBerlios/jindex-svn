@@ -1,0 +1,17 @@
+Installation (TODO)
+	1.
+		Make sure you have jdk 1.5
+
+	2.
+		edit config to contain paths being watched
+	3.
+		./run.sh runs the "server / indexer "
+		
+	4.
+		runClient.sh runs the client..
+		
+		
+	5. It doesn't work :)
+		Edit the two shell scripts and setup the correct path for the jar files.
+		
+	
