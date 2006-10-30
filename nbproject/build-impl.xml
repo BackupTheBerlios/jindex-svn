@@ -64,7 +64,9 @@ is divided into following sections:
             </and>
         </condition>
         <condition property="have.tests">
-            <or/>
+            <or>
+                <available file="${test.test.dir}"/>
+            </or>
         </condition>
         <condition property="have.sources">
             <or>
@@ -110,6 +112,7 @@ is divided into following sections:
         <fail unless="src.images.dir">Must set src.images.dir</fail>
         <fail unless="src.org.dir">Must set src.org.dir</fail>
         <fail unless="src.utils.dir">Must set src.utils.dir</fail>
+        <fail unless="test.test.dir">Must set test.test.dir</fail>
         <fail unless="build.dir">Must set build.dir</fail>
         <fail unless="dist.dir">Must set dist.dir</fail>
         <fail unless="build.classes.dir">Must set build.classes.dir</fail>
@@ -156,7 +159,9 @@ is divided into following sections:
             <attribute name="includes" default="**/*Test.java"/>
             <sequential>
                 <junit showoutput="true" fork="true" dir="${basedir}" failureproperty="tests.failed" errorproperty="tests.failed">
-                    <batchtest todir="${build.test.results.dir}"/>
+                    <batchtest todir="${build.test.results.dir}">
+                        <fileset dir="${test.test.dir}" includes="@{includes}"/>
+                    </batchtest>
                     <classpath>
                         <path path="${run.test.classpath}"/>
                     </classpath>
@@ -457,8 +462,10 @@ is divided into following sections:
         <!-- You can override this target in the ../build.xml file. -->
     </target>
     <target name="-do-compile-test" if="have.tests" depends="init,compile,-pre-pre-compile-test,-pre-compile-test">
-        <j2seproject3:javac srcdir="" destdir="${build.test.classes.dir}" debug="true" classpath="${javac.test.classpath}"/>
-        <copy todir="${build.test.classes.dir}"/>
+        <j2seproject3:javac srcdir="${test.test.dir}" destdir="${build.test.classes.dir}" debug="true" classpath="${javac.test.classpath}"/>
+        <copy todir="${build.test.classes.dir}">
+            <fileset dir="${test.test.dir}" excludes="**/*.java"/>
+        </copy>
     </target>
     <target name="-post-compile-test">
         <!-- Empty placeholder for easier customization. -->
@@ -471,12 +478,14 @@ is divided into following sections:
     </target>
     <target name="-do-compile-test-single" if="have.tests" depends="init,compile,-pre-pre-compile-test,-pre-compile-test-single">
         <fail unless="javac.includes">Must select some files in the IDE or set javac.includes</fail>
-        <j2seproject3:javac srcdir="" destdir="${build.test.classes.dir}" debug="true" classpath="${javac.test.classpath}">
+        <j2seproject3:javac srcdir="${test.test.dir}" destdir="${build.test.classes.dir}" debug="true" classpath="${javac.test.classpath}">
             <customize>
                 <patternset includes="${javac.includes}"/>
             </customize>
         </j2seproject3:javac>
-        <copy todir="${build.test.classes.dir}"/>
+        <copy todir="${build.test.classes.dir}">
+            <fileset dir="${test.test.dir}" excludes="**/*.java"/>
+        </copy>
     </target>
     <target name="-post-compile-test-single">
         <!-- Empty placeholder for easier customization. -->
