@@ -14,7 +14,9 @@
                 <root id="src.org.dir"/>
                 <root id="src.utils.dir"/>
             </source-roots>
-            <test-roots/>
+            <test-roots>
+                <root id="test.test.dir"/>
+            </test-roots>
         </data>
     </configuration>
 </project>
