@@ -3,8 +3,6 @@
  *
  * Created on 26 October 2006, 10:07
  *
- * To change this template, choose Tools | Template Manager
- * and open the template in the editor.
  */
 
 package org.jindex.client.window;
@@ -18,6 +16,7 @@ import org.gnu.gtk.ComboBoxEntry;
 import org.gnu.gtk.Dialog;
 import org.gnu.gtk.Entry;
 import org.gnu.gtk.FileChooserDialog;
+import org.gnu.gtk.FileFilter;
 import org.gnu.gtk.GtkStockItem;
 import org.gnu.gtk.HBox;
 import org.gnu.gtk.Label;
@@ -35,6 +34,8 @@ import org.gnu.gtk.event.ComboBoxListener;
  */
 public class NewSearchTypeDialog {
     Logger log = Logger.getLogger(NewSearchTypeDialog.class);
+    
+    private String value= "";
     /** Creates a new instance of NewSearchTypeDialog */
     Dialog dialog;
     public NewSearchTypeDialog(final LibGlade app) {
@@ -72,6 +73,7 @@ public class NewSearchTypeDialog {
                     fileDialog.run();
                     String filename = fileDialog.getFilename();
                     log.debug(filename);
+                    value = filename;
                     fileDialog.destroy();
                     filenameEntry.setText(filename);
                 }
@@ -82,5 +84,7 @@ public class NewSearchTypeDialog {
         dialog.present();
         int returnvalue = dialog.run();
     }
-    
+    public String getValue( ) {
+        return value;
+    }
 }
