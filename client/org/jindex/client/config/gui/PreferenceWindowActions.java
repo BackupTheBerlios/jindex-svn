@@ -5,7 +5,7 @@
  *
  */
 
-package org.jindex.client;
+package org.jindex.client.config.gui;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -68,7 +68,6 @@ public class PreferenceWindowActions {
         evoconfig = new EvolutionConfig();
         addListeners();
         fillList();
-        addEvolutionListeners();
     }
     public void addEvolutionListeners() {
         CheckButton mailbutton = (CheckButton) app.getWidget("configwindow.evolution.mail");

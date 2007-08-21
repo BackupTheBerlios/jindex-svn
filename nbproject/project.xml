@@ -6,13 +6,7 @@
             <name>JIndex</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <source-roots>
-                <root id="src.client.dir"/>
-                <root id="src.daemon.dir"/>
-                <root id="src.documents.dir"/>
-                <root id="src.gui.dir"/>
-                <root id="src.images.dir"/>
-                <root id="src.org.dir"/>
-                <root id="src.utils.dir"/>
+                <root id="src.src.dir"/>
             </source-roots>
             <test-roots>
                 <root id="test.test.dir"/>

@@ -1,5 +1,5 @@
 #!/bin/bash
-JAVA_HOME=~/jdk1.5.0_08/
+JAVA_HOME=/opt/jdk1.6.0_02
 LIBDIR=libs
 COMMON_CP=.:binout
 
