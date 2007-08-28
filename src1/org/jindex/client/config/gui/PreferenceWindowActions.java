@@ -9,19 +9,16 @@ package org.jindex.client.config.gui;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+
 import org.apache.log4j.Logger;
 import org.gnu.glade.LibGlade;
-import org.gnu.glib.EventType;
-import org.gnu.glib.Type;
 import org.gnu.gtk.Button;
 import org.gnu.gtk.CellRendererText;
 import org.gnu.gtk.CheckButton;
 import org.gnu.gtk.DataColumn;
 import org.gnu.gtk.DataColumnObject;
 import org.gnu.gtk.DataColumnString;
-import org.gnu.gtk.Dialog;
 import org.gnu.gtk.ListStore;
-import org.gnu.gtk.MenuItem;
 import org.gnu.gtk.Notebook;
 import org.gnu.gtk.TreeIter;
 import org.gnu.gtk.TreeView;
@@ -29,12 +26,9 @@ import org.gnu.gtk.TreeViewColumn;
 import org.gnu.gtk.Window;
 import org.gnu.gtk.event.ButtonEvent;
 import org.gnu.gtk.event.ButtonListener;
-import org.gnu.gtk.event.MenuItemEvent;
-import org.gnu.gtk.event.MenuItemListener;
 import org.gnu.gtk.event.NotebookEvent;
 import org.gnu.gtk.event.NotebookListener;
 import org.jindex.client.config.EvolutionConfig;
-import org.jindex.client.window.NewSearchTypeDialog;
 import org.jindex.daemon.config.ConfigReader;
 
 /**

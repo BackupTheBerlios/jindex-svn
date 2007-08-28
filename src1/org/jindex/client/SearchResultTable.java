@@ -1,16 +1,10 @@
 package org.jindex.client;
 
-import org.jindex.client.gui.MainContentsGUI;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 import org.apache.log4j.Logger;
-import org.gnu.gdk.Pixbuf;
 import org.gnu.gdk.PixbufLoader;
 import org.gnu.glib.Handle;
-import org.gnu.glib.JGException;
 import org.gnu.gtk.CellRendererPixbuf;
 import org.gnu.gtk.CellRendererText;
 import org.gnu.gtk.DataColumn;
@@ -25,6 +19,7 @@ import org.gnu.gtk.TreeView;
 import org.gnu.gtk.TreeViewColumn;
 import org.gnu.gtk.event.TreeViewEvent;
 import org.gnu.gtk.event.TreeViewListener;
+import org.jindex.client.gui.MainContentsGUI;
 import org.jindex.utils.FileUtility;
 
 public class SearchResultTable extends TreeView implements TreeViewListener {

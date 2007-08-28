@@ -3,9 +3,8 @@
  */
 package org.jindex.client.cache;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.HashMap;
+
 import org.apache.log4j.Logger;
 import org.jindex.utils.FileUtility;
 

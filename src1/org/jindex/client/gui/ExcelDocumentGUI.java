@@ -6,11 +6,8 @@
  */
 package org.jindex.client.gui;
 
-import org.jindex.client.cache.ImageCache;
-
 import org.apache.lucene.document.Document;
-
-import org.jindex.utils.FileUtility;
+import org.jindex.client.cache.ImageCache;
 
 /**
  * @author sorenm

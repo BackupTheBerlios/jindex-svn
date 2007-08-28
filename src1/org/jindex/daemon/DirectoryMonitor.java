@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import org.jindex.daemon.config.ConfigReader;
 
 import com.arosii.io.fam.FAM;
 import com.arosii.io.fam.FAMConnection;
 import com.arosii.io.fam.FAMEvent;
 import com.arosii.io.fam.FAMRequest;
-
-import org.jindex.daemon.config.ConfigReader;
 
 /**
  *

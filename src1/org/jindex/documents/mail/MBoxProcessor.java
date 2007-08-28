@@ -23,8 +23,6 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexWriter;
 
-import org.jindex.documents.GaimLogDocument;
-
 public class MBoxProcessor {
 	static Logger log = Logger.getLogger(MBoxProcessor.class);
 	public static void ProcessMBoxFile(File f, IndexWriter writer) throws java.io.FileNotFoundException {

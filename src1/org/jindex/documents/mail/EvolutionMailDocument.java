@@ -13,9 +13,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-
-import org.jindex.documents.GaimLogDocument;
-
 import org.jindex.utils.LuceneUtility;
 
 public class EvolutionMailDocument {

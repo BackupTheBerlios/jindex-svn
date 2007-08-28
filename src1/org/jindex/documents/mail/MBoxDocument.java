@@ -22,8 +22,6 @@ import org.apache.lucene.document.DateField;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 
-import org.jindex.documents.GaimLogDocument;
-
 public class MBoxDocument {
 	static Logger log = Logger.getLogger(MBoxDocument.class);
 	public static Document Document(File f) throws java.io.FileNotFoundException {

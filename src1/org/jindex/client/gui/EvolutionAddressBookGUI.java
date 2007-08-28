@@ -6,8 +6,6 @@
  */
 package org.jindex.client.gui;
 
-import org.jindex.client.cache.ImageCache;
-
 import java.io.UnsupportedEncodingException;
 
 import javax.mail.internet.MimeUtility;
@@ -15,10 +13,7 @@ import javax.mail.internet.MimeUtility;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.log4j.Logger;
 import org.apache.lucene.document.Document;
-
-import org.jindex.documents.GaimLogDocument;
-
-import org.jindex.utils.FileUtility;
+import org.jindex.client.cache.ImageCache;
 import org.jindex.utils.JStringUtils;
 
 /**

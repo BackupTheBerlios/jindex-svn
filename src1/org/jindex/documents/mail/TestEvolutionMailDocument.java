@@ -19,8 +19,6 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexWriter;
 
-import org.jindex.documents.GaimLogDocument;
-
 public class TestEvolutionMailDocument {
 	static Logger log = Logger.getLogger(TestEvolutionMailDocument.class);
 	public static String[] fields = { "path", "type", "from", "subject", "mailcontents" };

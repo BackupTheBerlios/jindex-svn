@@ -8,8 +8,6 @@ import org.apache.lucene.document.Field;
 import org.farng.mp3.MP3File;
 import org.farng.mp3.TagException;
 
-import sabercat.Sabercat;
-
 public class MP3Document implements SearchDocument {
 	public static String fields[] = { "modified", "path", "album", "title", "comment", "year", "artist", "genre" };
 
